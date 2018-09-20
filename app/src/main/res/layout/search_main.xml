@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="test.verizon.com.flickrphotos.UI.SearchActivity">
+
+    <TextView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:id="@+id/headin"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:text="Search on Image Basis"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/headin"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchLL">
+        <EditText
+            android:hint="Search here"
+            android:id="@+id/search_edit_text"
+            android:imeOptions="actionSearch"
+            android:padding="10dp"
+            android:layout_marginLeft="13dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@android:color/holo_blue_dark"
+            android:layout_toLeftOf="@+id/searchBtn"/>
+
+        <ImageButton
+            android:scaleType="centerInside"
+            android:id="@+id/searchBtn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/search"
+            android:layout_alignParentRight="true"
+             />
+    </RelativeLayout>
+
+
+  <android.support.v7.widget.RecyclerView
+      android:layout_below="@+id/searchLL"
+      android:padding="10dp"
+      android:id="@+id/sampleRecyler"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:scrollbars="vertical"
+      android:visibility="gone">
+
+  </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
+</layout>
